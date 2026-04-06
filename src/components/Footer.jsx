@@ -21,7 +21,7 @@ function FadeIn({ children, delay = 0, className = '' }) {
 
 export default function Footer() {
   return (
-    <footer id="kontakt" className="relative border-t border-[#A07850]/20 py-20 px-6 bg-[#2C1A0E]">
+    <footer id="kontakt" className="relative border-t border-[#A07850]/20 py-20 pb-28 px-6 bg-[#2C1A0E]">
       <div className="max-w-5xl mx-auto">
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           <FadeIn className="md:col-span-1">
@@ -105,7 +105,7 @@ export default function Footer() {
 
         <div className="h-px bg-gradient-to-r from-transparent via-[#A07850]/20 to-transparent mb-8" />
 
-        <FadeIn delay={0.3} className="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-[#F5EDE0]/25 text-xs font-sans tracking-wide">
             &copy; {new Date().getFullYear()} Stefanie Charlotte. Alle rettigheter forbeholdt.
           </p>
@@ -116,11 +116,11 @@ export default function Footer() {
             href="https://lilitlabs.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#A07850]/30 hover:text-[#A07850]/60 text-xs font-sans tracking-wide transition-colors duration-300"
+            className="text-[#A07850]/70 hover:text-[#A07850]/100 text-xs font-sans tracking-wide transition-colors duration-300"
           >
             Utviklet av Lilit Labs™
           </a>
-        </FadeIn>
+        </div>
       </div>
     </footer>
   )
