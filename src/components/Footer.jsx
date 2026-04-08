@@ -118,7 +118,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="text-[#A07850]/70 hover:text-[#A07850]/100 text-xs font-sans tracking-wide transition-colors duration-300"
           >
-            Utviklet av Lilit Labs™
+            Nettsiden er utviklet av Lilit Labs™
           </a>
         </div>
       </div>

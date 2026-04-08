@@ -66,18 +66,19 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="tjenester" className="relative py-28 px-6 bg-[#F5EDE0]">
-      <div className="max-w-5xl mx-auto">
-        <FadeIn className="flex items-center gap-4 mb-6">
+    <section id="tjenester" className="relative py-28 px-6 bg-[#F5EDE0] flex flex-col items-center">
+      <div className="w-full max-w-5xl">
+        <FadeIn className="flex items-center justify-center gap-4 mb-6">
           <div className="w-10 h-px bg-[#A07850]/60" />
           <span className="text-[#A07850] text-xs tracking-[0.3em] uppercase font-sans">Tjenester</span>
+          <div className="w-10 h-px bg-[#A07850]/60" />
         </FadeIn>
 
-        <FadeIn delay={0.1} className="mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-light text-[#2C1A0E] leading-snug max-w-xl">
+        <FadeIn delay={0.1} className="mb-16 text-center">
+          <h2 className="font-serif text-4xl md:text-5xl font-light text-[#2C1A0E] leading-snug">
             Hva jeg tilbyr
           </h2>
-          <p className="mt-4 text-[#3D2610]/60 font-sans font-light text-lg max-w-lg leading-relaxed">
+          <p className="mt-4 text-[#3D2610]/60 font-sans font-light text-lg leading-relaxed">
             Alle behandlinger kan gjennomføres både fysisk og online.
           </p>
         </FadeIn>
@@ -85,7 +86,7 @@ export default function Services() {
         <div className="grid md:grid-cols-3 gap-6">
           {services.map((service, i) => (
             <FadeIn key={service.title} delay={0.1 + i * 0.1}>
-              <div className="group relative p-8 border border-[#C4A882]/40 rounded-sm bg-[#EDD9C0]/60 hover:bg-[#EDD9C0] hover:border-[#A07850]/50 transition-all duration-500 h-full flex flex-col">
+              <div className="group relative p-8 border border-[#C4A882]/40 rounded-sm bg-[#EDD9C0]/60 hover:bg-[#EDD9C0] hover:border-[#A07850]/50 transition-all duration-500 h-full flex flex-col text-center">
                 <div className="absolute top-3 right-3 w-6 h-6 border-t border-r border-[#A07850]/20 group-hover:border-[#A07850]/50 transition-colors duration-500" />
 
                 <span className="text-[#A07850]/70 text-3xl mb-6 block group-hover:text-[#7A5230] transition-colors duration-300">
@@ -100,13 +101,15 @@ export default function Services() {
                   {service.description}
                 </p>
 
-                <div className="flex flex-col gap-2 pt-4 border-t border-[#A07850]/20">
-                  {service.highlights.map((h) => (
-                    <div key={h} className="flex items-center gap-2">
-                      <div className="w-1 h-1 bg-[#A07850]/60 rounded-full flex-shrink-0" />
-                      <span className="text-[#5C3820]/70 text-xs font-sans tracking-wide">{h}</span>
-                    </div>
-                  ))}
+                <div className="flex flex-col gap-2 pt-4 border-t border-[#A07850]/20 items-center">
+                  <div className="flex flex-col gap-2 text-left">
+                    {service.highlights.map((h) => (
+                      <div key={h} className="flex items-center gap-2">
+                        <div className="w-1 h-1 bg-[#A07850]/60 rounded-full flex-shrink-0" />
+                        <span className="text-[#5C3820]/70 text-xs font-sans tracking-wide">{h}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </FadeIn>

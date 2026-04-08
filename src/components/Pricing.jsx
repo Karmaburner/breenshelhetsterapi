@@ -61,18 +61,19 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section id="priser" className="relative py-28 px-6 bg-[#EDD9C0]">
-      <div className="max-w-5xl mx-auto">
-        <FadeIn className="flex items-center gap-4 mb-6">
+    <section id="priser" className="relative py-28 px-6 bg-[#EDD9C0] flex flex-col items-center">
+      <div className="w-full max-w-5xl">
+        <FadeIn className="flex items-center justify-center gap-4 mb-6">
           <div className="w-10 h-px bg-[#A07850]/60" />
           <span className="text-[#A07850] text-xs tracking-[0.3em] uppercase font-sans">Priser</span>
+          <div className="w-10 h-px bg-[#A07850]/60" />
         </FadeIn>
 
-        <FadeIn delay={0.1} className="mb-16">
+        <FadeIn delay={0.1} className="mb-16 text-center">
           <h2 className="font-serif text-4xl md:text-5xl font-light text-[#2C1A0E] leading-snug">
             Invester i deg selv
           </h2>
-          <p className="mt-4 text-[#3D2610]/60 font-sans font-light text-lg max-w-lg leading-relaxed">
+          <p className="mt-4 text-[#3D2610]/60 font-sans font-light text-lg leading-relaxed">
             Alle priser er inkl. mva. Betaling skjer via Vipps eller faktura.
           </p>
         </FadeIn>
@@ -81,17 +82,15 @@ export default function Pricing() {
           {plans.map((plan, i) => (
             <FadeIn key={plan.title} delay={0.1 + i * 0.12}>
               <div
-                className={`relative p-8 rounded-sm flex flex-col gap-6 h-full transition-all duration-500 ${
+                className={`relative p-8 rounded-sm flex flex-col gap-6 h-full transition-all duration-500 text-center overflow-hidden ${
                   plan.featured
                     ? 'bg-[#7A5230] border border-[#5C3820]'
                     : 'bg-[#F5EDE0] border border-[#C4A882]/40'
                 }`}
               >
                 {plan.featured && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="bg-[#5C3820] text-[#F5EDE0] text-xs font-sans tracking-widest uppercase px-4 py-1 rounded-sm">
-                      Anbefalt
-                    </span>
+                  <div className="absolute top-6 right-[-32px] w-36 rotate-45 bg-[#5C3820] text-[#F5EDE0] text-[10px] font-sans tracking-widest uppercase text-center py-1.5">
+                    Anbefalt
                   </div>
                 )}
 
@@ -104,7 +103,7 @@ export default function Pricing() {
                   </p>
                 </div>
 
-                <div className="flex items-baseline gap-1">
+                <div className="flex items-baseline gap-1 justify-center">
                   <span className={`font-serif text-5xl font-light ${plan.featured ? 'text-[#F5EDE0]' : 'text-[#5C3820]'}`}>
                     {plan.price}
                   </span>
@@ -115,13 +114,15 @@ export default function Pricing() {
                   {plan.description}
                 </p>
 
-                <div className="flex flex-col gap-3">
-                  {plan.features.map((f) => (
-                    <div key={f} className="flex items-start gap-3">
-                      <span className={`mt-0.5 text-xs flex-shrink-0 ${plan.featured ? 'text-[#D4B896]' : 'text-[#A07850]'}`}>✓</span>
-                      <span className={`text-sm font-sans ${plan.featured ? 'text-[#F5EDE0]/80' : 'text-[#3D2610]/65'}`}>{f}</span>
-                    </div>
-                  ))}
+                <div className="flex flex-col gap-3 items-center">
+                  <div className="flex flex-col gap-3 text-left">
+                    {plan.features.map((f) => (
+                      <div key={f} className="flex items-start gap-3">
+                        <span className={`mt-0.5 text-xs flex-shrink-0 ${plan.featured ? 'text-[#D4B896]' : 'text-[#A07850]'}`}>✓</span>
+                        <span className={`text-sm font-sans ${plan.featured ? 'text-[#F5EDE0]/80' : 'text-[#3D2610]/65'}`}>{f}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
                 <a
