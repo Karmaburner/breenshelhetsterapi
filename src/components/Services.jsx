@@ -97,19 +97,17 @@ export default function Services() {
                   {service.title}
                 </h3>
 
-                <p className="text-[#3D2610]/65 font-sans font-light text-sm leading-relaxed mb-6 flex-1">
+                <p className="text-[#3D2610]/65 font-sans font-light text-sm leading-relaxed mb-6 flex-1 px-2 text-center">
                   {service.description}
                 </p>
 
-                <div className="flex flex-col gap-2 pt-4 border-t border-[#A07850]/20 items-center">
-                  <div className="flex flex-col gap-2 text-left">
-                    {service.highlights.map((h) => (
-                      <div key={h} className="flex items-center gap-2">
-                        <div className="w-1 h-1 bg-[#A07850]/60 rounded-full flex-shrink-0" />
-                        <span className="text-[#5C3820]/70 text-xs font-sans tracking-wide">{h}</span>
-                      </div>
-                    ))}
-                  </div>
+                <div className="flex flex-col gap-2 pt-4 border-t border-[#A07850]/20">
+                  {service.highlights.map((h) => (
+                    <div key={h} className="flex items-center justify-center gap-2">
+                      <div className="w-1 h-1 bg-[#A07850]/60 rounded-full flex-shrink-0" />
+                      <span className="text-[#5C3820]/70 text-xs font-sans tracking-wide">{h}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </FadeIn>

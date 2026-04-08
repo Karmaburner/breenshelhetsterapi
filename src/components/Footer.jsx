@@ -23,7 +23,7 @@ export default function Footer() {
   return (
     <footer id="kontakt" className="relative border-t border-[#A07850]/20 py-20 pb-28 px-6 bg-[#2C1A0E]">
       <div className="max-w-5xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-12 mb-16">
+        <div className="grid md:grid-cols-3 gap-12 mb-16 text-center md:text-left">
           <FadeIn className="md:col-span-1">
             <h3 className="font-serif text-2xl font-light text-[#D4B896] mb-3">
               Stefanie Charlotte
@@ -33,7 +33,7 @@ export default function Footer() {
               <br />
               Tilbyr behandlinger fysisk og online.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center md:justify-start">
               {[
                 { label: 'Instagram', href: 'https://www.instagram.com/stefaniebreen/' },
                 { label: 'Facebook', href: 'https://www.facebook.com/stefanie.c.breen' },
