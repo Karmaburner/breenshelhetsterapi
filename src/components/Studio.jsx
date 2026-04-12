@@ -24,7 +24,7 @@ function FadeIn({ children, delay = 0, className = '' }) {
 
 export default function Studio() {
   return (
-    <section className="py-40 px-6 bg-[#F5EDE0] flex flex-col items-center border-t border-[#A07850]/20">
+    <section className="px-6 bg-[#F5EDE0] flex flex-col items-center border-t border-[#A07850]/20" style={{ paddingTop: '1.5rem', paddingBottom: '4rem' }}>
       <div className="w-full max-w-5xl">
         <FadeIn className="flex items-center justify-center gap-4 mb-6">
           <div className="w-10 h-px bg-[#A07850]/60" />

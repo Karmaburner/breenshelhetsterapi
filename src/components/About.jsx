@@ -22,7 +22,7 @@ function FadeIn({ children, delay = 0, className = '' }) {
 
 export default function About() {
   return (
-    <section id="om-meg" className="relative py-40 px-6 bg-[#EDD9C0] flex flex-col items-center">
+    <section id="om-meg" className="relative px-6 bg-[#EDD9C0] flex flex-col items-center" style={{ paddingTop: '1.5rem', paddingBottom: '0.5rem' }}>
       <div className="w-full max-w-2xl text-center">
         <FadeIn className="flex items-center justify-center gap-4 mb-14">
           <div className="w-10 h-px bg-[#A07850]/60" />
