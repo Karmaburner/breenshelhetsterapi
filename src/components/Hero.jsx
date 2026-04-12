@@ -40,18 +40,20 @@ export default function Hero() {
         gjennom dyp, skånsom og transformerende terapi.
       </motion.p>
 
-      <motion.div {...fadeUp(0.4)} className="flex flex-col sm:flex-row gap-4 mt-14">
+      <motion.div {...fadeUp(0.4)} className="flex flex-col sm:flex-row gap-4" style={{ marginTop: '3.5rem' }}>
         <a
           href="https://system.easypractice.net/book/breens-helhetsterapi-1?cookie_fixed=1#choose-service"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-8 py-3.5 bg-[#7A5230] text-[#F5EDE0] font-sans text-sm tracking-widest uppercase rounded-sm hover:bg-[#5C3820] transition-colors duration-300"
+          className="bg-[#7A5230] text-[#F5EDE0] font-sans text-sm tracking-widest uppercase hover:bg-[#5C3820] transition-colors duration-300"
+          style={{ padding: '1rem 2.5rem', borderRadius: '8px', minWidth: '220px', textAlign: 'center' }}
         >
           Book en samtale
         </a>
         <a
           href="#tjenester"
-          className="px-8 py-3.5 border border-[#A07850]/50 text-[#7A5230] font-sans text-sm tracking-widest uppercase rounded-sm hover:border-[#7A5230] hover:bg-[#EDD9C0]/40 transition-colors duration-300"
+          className="border border-[#A07850]/50 text-[#7A5230] font-sans text-sm tracking-widest uppercase hover:border-[#7A5230] hover:bg-[#EDD9C0]/40 transition-colors duration-300"
+          style={{ padding: '1rem 2.5rem', borderRadius: '8px', minWidth: '220px', textAlign: 'center' }}
         >
           Se tjenester
         </a>
