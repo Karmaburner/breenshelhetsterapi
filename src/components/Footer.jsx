@@ -11,7 +11,7 @@ function FadeIn({ children, delay = 0, className = '' }) {
       ref={ref}
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.7, delay, ease: 'easeOut' }}
+      transition={{ duration: 0.6, delay, ease: 'easeOut' }}
       className={className}
     >
       {children}
@@ -65,7 +65,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-[#F5EDE0]/45 hover:text-[#D4B896] font-sans text-sm transition-colors duration-300"
+                    className="block py-2 text-[#F5EDE0]/45 hover:text-[#D4B896] font-sans text-sm transition-colors duration-300 min-h-[44px] flex items-center"
                   >
                     {link.label}
                   </a>
@@ -109,11 +109,8 @@ export default function Footer() {
           <p className="text-[#F5EDE0]/25 text-xs font-sans tracking-wide">
             &copy; {new Date().getFullYear()} Stefanie Charlotte. Alle rettigheter forbeholdt.
           </p>
-          <p className="text-[#F5EDE0]/20 text-xs font-sans">
-            Laget med kjærlighet og intensjon ✦
-          </p>
           <a
-            href="https://lilitlabs.com"
+            href="https://lilitlabs.no"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#A07850]/70 hover:text-[#A07850]/100 text-xs font-sans tracking-wide transition-colors duration-300"

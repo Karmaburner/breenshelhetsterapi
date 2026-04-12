@@ -11,7 +11,7 @@ function FadeIn({ children, delay = 0, className = '' }) {
       ref={ref}
       initial={{ opacity: 0, y: 24 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8, delay, ease: 'easeOut' }}
+      transition={{ duration: 0.6, delay, ease: 'easeOut' }}
       className={className}
     >
       {children}
@@ -66,7 +66,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="tjenester" className="relative py-28 px-6 bg-[#F5EDE0] flex flex-col items-center">
+    <section id="tjenester" className="relative py-40 px-6 bg-[#EDD9C0] flex flex-col items-center">
       <div className="w-full max-w-5xl">
         <FadeIn className="flex items-center justify-center gap-4 mb-6">
           <div className="w-10 h-px bg-[#A07850]/60" />

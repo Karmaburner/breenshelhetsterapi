@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 30 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 1, delay, ease: 'easeOut' },
+  transition: { duration: 0.6, delay, ease: 'easeOut' },
 })
 
 export default function Hero() {
@@ -17,14 +17,14 @@ export default function Hero() {
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[500px] rounded-full bg-[#D4B896]/25 blur-[120px]" />
       </div>
 
-      <motion.div {...fadeUp(0.2)} className="flex items-center gap-4 mb-8">
+      <motion.div {...fadeUp(0.1)} className="flex items-center gap-4 mb-8">
         <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#A07850]/50" />
         <span className="text-[#A07850] text-xs tracking-[0.3em] uppercase font-sans">Hypnoterapi · EFT · Traumeterapi · Healing</span>
         <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#A07850]/50" />
       </motion.div>
 
       <motion.h1
-        {...fadeUp(0.4)}
+        {...fadeUp(0.2)}
         className="font-serif text-5xl md:text-7xl lg:text-8xl font-light leading-tight text-[#2C1A0E] mb-6"
       >
         Finn veien
@@ -33,14 +33,14 @@ export default function Hero() {
       </motion.h1>
 
       <motion.p
-        {...fadeUp(0.6)}
+        {...fadeUp(0.3)}
         className="max-w-xl text-[#3D2610]/60 font-sans font-light text-lg md:text-xl leading-relaxed mb-10"
       >
         Jeg hjelper deg å frigjøre gamle mønstre, skape indre ro og leve mer autentisk –
         gjennom dyp, skånsom og transformerende terapi.
       </motion.p>
 
-      <motion.div {...fadeUp(0.8)} className="flex flex-col sm:flex-row gap-4">
+      <motion.div {...fadeUp(0.4)} className="flex flex-col sm:flex-row gap-4 mt-14">
         <a
           href="https://system.easypractice.net/book/breens-helhetsterapi-1?cookie_fixed=1#choose-service"
           target="_blank"
@@ -60,7 +60,7 @@ export default function Hero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
+        transition={{ delay: 0.7, duration: 0.6 }}
         className="absolute bottom-10 flex flex-col items-center gap-2"
       >
         <span className="text-[#A07850]/50 text-xs tracking-widest uppercase font-sans">Scroll</span>

@@ -30,8 +30,8 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#hjem" className="font-serif text-xl font-light tracking-widest text-[#5C3820]">
+      <div className="max-w-6xl mx-auto px-10 py-4 flex items-center justify-between">
+        <a href="#hjem" className="font-serif text-xl font-light tracking-widest text-[#5C3820]" style={{ marginLeft: '2rem' }}>
           Stefanie Charlotte
         </a>
 
@@ -68,13 +68,13 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
             className="md:hidden bg-[#F5EDE0]/95 border-t border-[#A07850]/20"
           >
-            <ul className="flex flex-col items-center py-6 gap-5 list-none">
+            <ul className="flex flex-col items-center py-6 gap-1 list-none">
               {links.map((link) => (
-                <li key={link.href}>
+                <li key={link.href} className="w-full text-center">
                   <a
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className="font-sans text-sm tracking-widest uppercase text-[#3D2610]/70 hover:text-[#A07850] transition-colors duration-300"
+                    className="block py-3 px-8 font-sans text-sm tracking-widest uppercase text-[#3D2610]/70 hover:text-[#A07850] transition-colors duration-300 min-h-[44px] flex items-center justify-center"
                   >
                     {link.label}
                   </a>
